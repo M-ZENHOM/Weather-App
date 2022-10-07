@@ -1,0 +1,21 @@
+@use "config/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-style;
+  background-image: $bg-img;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: $trans;
+  width: $m-w;
+  height: $m-h;
+  overflow: hidden;
+}

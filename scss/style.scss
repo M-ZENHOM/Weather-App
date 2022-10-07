@@ -1,0 +1,65 @@
+@use "config/variables" as *;
+@use "components/layout";
+@use "components/mixins" as *;
+
+.weather-container {
+  @include postionCentering;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 900px;
+  height: 500px;
+  background-color: $light-color;
+  border-radius: 20px;
+  overflow: hidden;
+  img {
+    width: 40%;
+    height: 107%;
+    object-fit: cover;
+  }
+  & .weather-info {
+    @include flexCentering;
+    margin: 0 auto;
+    .search-bar {
+      @include outlineNone;
+      @include serachStyle;
+      &::placeholder {
+        color: $text-color;
+        letter-spacing: 1px;
+        opacity: 0.5;
+      }
+    }
+    & button {
+      @include serachStyle;
+      @include outlineNone;
+      width: 100px;
+      margin-bottom: 20px;
+      transition: $trans;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        width: 300px;
+        background-color: $hover-color;
+      }
+    }
+    & h2 {
+      color: $bg-color;
+      font-size: 27px;
+    }
+    & .temp {
+      font: {
+        size: 30px;
+        weight: bold;
+      }
+    }
+    & .description {
+      text-transform: capitalize;
+    }
+    & .icon {
+      width: 70px;
+    }
+    & span {
+      color: $bg-color;
+    }
+  }
+}

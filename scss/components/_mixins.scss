@@ -1,0 +1,28 @@
+@use "config/variables" as *;
+@mixin postionCentering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin flexCentering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@mixin outlineNone {
+    outline: none;
+  border: none;
+}
+
+@mixin serachStyle {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: 10px;
+}
