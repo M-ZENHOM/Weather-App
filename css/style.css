@@ -49,6 +49,14 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 991px) {
+  .weather-container {
+    width: 400px;
+  }
+  .weather-container img {
+    display: none;
+  }
+}
 .weather-container .weather-info {
   display: -webkit-box;
   display: -ms-flexbox;
