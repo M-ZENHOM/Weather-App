@@ -53,7 +53,7 @@ body {
   .weather-container {
     width: 400px;
   }
-  .weather-container img {
+  .weather-container .con-img {
     display: none;
   }
 }
